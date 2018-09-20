@@ -1,0 +1,43 @@
+<prescriptions xmlns="http://greenify.github.io/schemas/prescription/v3">
+    <prescription type="service" class="com.xiaomi.push.service.XMPushService" sender="any" />
+    <prescription type="service" class="com.xiaomi.push.service.XMJobService" sender="any" />
+    <prescription type="service" class="com.xiaomi.mipush.sdk.PushMessageHandler" sender="any" />
+    <prescription type="service" sender="other-app">
+        <intent-filter>
+            <action name="com.xiaomi.mipush.sdk.WAKEUP" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.xiaomi.push.service.receivers.MIPushMessageHandler" sender="any" />
+    <prescription type="broadcast" class="com.xiaomi.push.service.receivers.NetworkStatusReceiver" sender="any" />
+    <prescription type="broadcast" class="com.xiaomi.push.service.receivers.PingReceiver" sender="any" />
+  
+    <prescription type="service" class="com.baidu.android.pushservice.CommandService" sender="any"/>
+    <prescription type="service" class="com.baidu.sapi2.share.ShareService">
+        <intent-filter>
+            <action name="baidu.intent.action.account.SHARE_SERVICE" />
+        </intent-filter>
+    </prescription>
+    
+    <prescription type="service" class="com.igexin.sdk.PushService" sender="any"/>
+    <prescription type="activity" class="com.igexin.sdk.GActivity" sender="any"/>
+    
+    <prescription type="service" class="com.huawei.android.pushagent.PushService" sender="any"/>
+    <prescription type="service" class="com.meizu.cloud.pushsdk.NotificationService" sender="any"/>
+    <prescription type="service" class="com.coloros.mcssdk.PushService" sender="any"/>
+    <prescription type="service" class="com.vivo.push.sdk.service.CommandClientService" sender="any"/>
+    <prescription type="service" class="cn.jpush.android.service.DaemonService" sender="any"/>
+    <prescription type="service" class="cn.jpush.android.service.PushService" sender="any"/>
+    <prescription type="service" class="com.ss.android.message.PushJobService" sender="any"/>
+    <prescription type="service" class="com.ss.android.push.daemon.PushService" sender="any"/>
+    <prescription type="broadcast" class="com.igexin.sdk.PushReceiver" sender="any" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="any" />
+    <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="any" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="any" />
+    <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="any" />
+    <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="any" />
+    <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="any" />
+    <prescription type="broadcast" class="cn.jpush.android.service.PushReceiverver" sender="any" />
+    <prescription type="broadcast" class="com.baidu.android.pushservice.RegistrationReceiver" sender="any" />
+    <prescription type="broadcast" class="com.ss.android.push.DefaultReceiver" sender="any" />
+    <prescription type="broadcast" class="com.ss.android.message.MessageReceiver" sender="any" />
+</prescriptions>
