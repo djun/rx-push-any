@@ -1,6 +1,7 @@
 # 简介
 
 本处方用于完全屏蔽各种推送SDK或其他会导致唤醒的功能或服务。
+
 （也整合了oasisfeng原先提供的Demo内容）
 
 针对：小米Push，百度Push，百度SSO，个推SDK，华为Push，魅族Push，ColorOSPush，vivoPush，jPush，ssPush
