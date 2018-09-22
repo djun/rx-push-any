@@ -2,6 +2,7 @@
     <prescription type="service" class="com.xiaomi.push.service.XMPushService" sender="other-app" />
     <prescription type="service" class="com.xiaomi.push.service.XMJobService" sender="other-app" />
     <prescription type="service" class="com.xiaomi.mipush.sdk.PushMessageHandler" sender="other-app" />
+    <prescription type="service" class="com.xiaomi.mipush.sdk.MessageHandlerService" sender="other-app" />
     <prescription type="service" sender="other-app">
         <intent-filter>
             <action name="com.xiaomi.mipush.sdk.WAKEUP" />
