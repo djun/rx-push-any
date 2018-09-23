@@ -14,9 +14,28 @@
   
     <prescription type="service" class="com.baidu.android.pushservice.CommandService" sender="other-app"/>
     <prescription type="service" class="com.baidu.android.pushservice.PushService" sender="other-app" />
+    <prescription type="service">
+        <intent-filter>
+            <action name="com.baidu.android.pushservice.action.METHOD" />
+        </intent-filter>
+        <intent-filter>
+            <action name="com.baidu.android.pushservice.action.BIND_SYNC" />
+        </intent-filter>
+    </prescription>
     <prescription type="service" class="com.baidu.sapi2.share.ShareService">
         <intent-filter>
             <action name="baidu.intent.action.account.SHARE_SERVICE" />
+        </intent-filter>
+    </prescription>
+    
+    <prescription type="service" class="io.rong.push.PushService" sender="any" />
+    <prescription type="broadcast">
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
         </intent-filter>
     </prescription>
     
@@ -33,15 +52,19 @@
     <prescription type="service" class="cn.jpush.android.service.PushService" sender="other-app"/>
     <prescription type="service" class="com.ss.android.message.PushJobService" sender="other-app"/>
     <prescription type="service" class="com.ss.android.push.daemon.PushService" sender="other-app"/>
+    <prescription type="service" class="com.ss.android.message.NotifyService" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV3" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushService" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.rpc.XGRemoteService" sender="other-app" />
     <prescription type="service" class="com.umeng.update.net.DownloadingService" sender="other-app" />
+    <prescription type="service" class="org.android.agoo.client.MessageReveiverService" sender="other-app"/>
     <prescription type="service" class="com.umeng.message.UmengService" sender="other-app" />
     <prescription type="service" class="com.umeng.message.UmengDownloadResourceService" sender="other-app" />
     <prescription type="service" class="com.umeng.message.UmengIntentService" sender="other-app" />
     <prescription type="service" class="com.umeng.message.UmengMessageIntentReceiverService" sender="other-app" />
     <prescription type="service" class="com.umeng.message.UmengMessageCallbackHandlerService" sender="other-app" />
+    <prescription type="service" class="com.umeng.message.XiaomiIntentService" sender="other-app" />
+    <prescription type="service" class="com.umeng.message.provider.MessageProvider" sender="other-app" />
     <prescription type="service" class="com.dianping.base.push.pushservice.dp.FakeService" sender="other-app" />
     <prescription type="service" class="com.dianping.base.push.pushservice.dp.DPPushService" sender="other-app" />
     <prescription type="service" class="com.dianping.base.push.pushservice.PushWakeUpJob" sender="other-app" />
@@ -49,6 +72,17 @@
     <prescription type="service" class="com.tencent.qalsdk.service.QalService" sender="other-app" />
     <prescription type="service" class="com.tencent.qalsdk.service.QalAssistService" sender="other-app" />
     <prescription type="service" class="com.qq.e.comm.DownloadService" sender="other-app" />
+    
+    <prescription type="service">
+        <intent-filter>
+            <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+            <action name="cn.jpush.android.intent.REGISTRATION" />
+            <action name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+            <action name="cn.jpush.android.intent.CONNECTION" />
+        </intent-filter>
+    </prescription>
+    
+    <prescription type="service" package="com.sohu.inputmethod.sogou" class="com.sogou.udp.push.PushService" sender="other-app" />
     
     <prescription type="activity" class="com.igexin.sdk.PushActivity" sender="other-app" />
     <prescription type="activity" class="com.igexin.sdk.GActivity" sender="other-app"/>
@@ -61,9 +95,12 @@
     <prescription type="broadcast" class="com.igexin.sdk.PushManagerReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.getuiext.service.PayloadReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.download.DownloadReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="other-app" />
+    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="any" />
+    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="any" />
+    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.EventReceiver" sender="any" />
     <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="other-app" />
@@ -73,4 +110,54 @@
     <prescription type="broadcast" class="com.ss.android.message.MessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.tencent.android.tpush.XGPushReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.umeng.message.NotificationProxyBroadcastReceiver" sender="other-app" />
+    
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="com.tencent.android.tpush.action.SDK" />
+            <action name="com.tencent.android.tpush.action.FEEDBACK" />
+            <action name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+            <action name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+        </intent-filter>
+    </prescription>
+    
+    
+    <!-- Mobridge -->
+    <prescription type="service" class="com.mobridge.MoPushService" sender="any" />
+    <!-- Grandmobile -->
+    <prescription type="service" class="cn.grandmobile.sdk.android.PushBroadcastReceiver" sender="any" />
+    <prescription type="service" class="cn.grandmobile.sdk.android.PushService" sender="any" />
+    <!-- Bomb -->
+    <prescription type="service" class="cn.bmob.push.PushReceiver" sender="any" />
+    <prescription type="service" class="cn.bmob.push.lib.service.PushService" sender="any" />
+    <prescription type="service" class="cn.immob.sdk.net.DownloadService" sender="any" />
+    <!-- Yunba -->
+    <prescription type="service" class="io.yunba.android.core.YunBaService" sender="any" />
+    <!-- Atom -->
+    <prescription type="service" class="com.atom.push.sdk.AtomAlarmReceiver" sender="any" />
+    <prescription type="service" class="com.atom.push.sdk.AtomPushActionCustomReceiver" sender="any" />
+    <prescription type="service" class="com.atom.push.sdk.AtomPushService" sender="any" />
+    <!-- MoPaas -->
+    <prescription type="service" class="com.mopaas.backendmonitor.MonitorService" sender="any" />
+    <prescription type="service" class="com.mopaas.pushservice.sdk.MPSPushService" sender="any" />
+    <!-- CMCC -->
+    <prescription type="service" class="com.cmcc.aoe.AoeService" sender="any" />
+    <prescription type="service" class="com.cmcc.aoe.push.AOEService" sender="any" />
+    <!-- WeCloud -->
+    <prescription type="service" class="com.jiubang.go.push.PushServiceReceiver" sender="any" />
+    <prescription type="service" class="com.jiubang.go.push.PushService" sender="any" />
+    <prescription type="service" class="com.zihao.service.MyMsgService" sender="any" />
+    <!-- AVOS -->
+    <prescription type="service" class="com.avos.avoscloud.AVDefaultNotificationReceiver" sender="any" />
+    <prescription type="service" class="com.avos.avoscloud.PushService" sender="any" />
+    <!-- Cocos -->
+    <prescription type="service" class="com.cocos.push.client.CCPushClientReceiver" sender="any" />
+    <prescription type="service" class="com.cocos.push.service.CCPushService" sender="any" />
+    <!-- mPush -->
+    <prescription type="service" class="com.mrocker.push.service.PushService" sender="any" />
+    <prescription type="service" class="com.mrocker.push.service.PushServiceReceiver" sender="any" />
+    <!-- imofan -->
+    <prescription type="service" class="com.imofan.android.basic.update.MFUpdateService" sender="any" />
+    <!-- ixintui -->
+    <prescription type="service" class="com.ixintui.push.PushService" sender="any" />
+    <prescription type="service" class="com.ixintui.push.MediateService" sender="any" />
 </prescriptions>
