@@ -14,7 +14,7 @@
   
     <prescription type="service" class="com.baidu.android.pushservice.CommandService" sender="other-app"/>
     <prescription type="service" class="com.baidu.android.pushservice.PushService" sender="other-app" />
-    <prescription type="service">
+    <prescription type="service" sender="other-app" >
         <intent-filter>
             <action name="com.baidu.android.pushservice.action.METHOD" />
         </intent-filter>
@@ -22,20 +22,18 @@
             <action name="com.baidu.android.pushservice.action.BIND_SYNC" />
         </intent-filter>
     </prescription>
-    <prescription type="service" class="com.baidu.sapi2.share.ShareService">
+    <prescription type="service" class="com.baidu.sapi2.share.ShareService" sender="other-app" >
         <intent-filter>
             <action name="baidu.intent.action.account.SHARE_SERVICE" />
         </intent-filter>
     </prescription>
     
+    <prescription type="service" class="io.rong.push.core.MessageHandleService" sender="any" />
     <prescription type="service" class="io.rong.push.PushService" sender="any" />
-    <prescription type="broadcast">
+    <prescription type="broadcast" class="io.rong.push.PushReceiver" sender="any" />
+    <prescription type="broadcast" sender="other-app" >
         <intent-filter>
-            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
-            <action name="android.intent.action.BOOT_COMPLETED" />
-            <action name="android.intent.action.USER_PRESENT" />
-            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
-            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            <action name="io.rong.push.intent.action.HEART_BEAT" />
         </intent-filter>
     </prescription>
     
@@ -73,7 +71,7 @@
     <prescription type="service" class="com.tencent.qalsdk.service.QalAssistService" sender="other-app" />
     <prescription type="service" class="com.qq.e.comm.DownloadService" sender="other-app" />
     
-    <prescription type="service">
+    <prescription type="service" sender="other-app" >
         <intent-filter>
             <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
             <action name="cn.jpush.android.intent.REGISTRATION" />
