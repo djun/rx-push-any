@@ -11,6 +11,13 @@
     <prescription type="broadcast" class="com.xiaomi.push.service.receivers.MIPushMessageHandler" sender="other-app" />
     <prescription type="broadcast" class="com.xiaomi.push.service.receivers.NetworkStatusReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.xiaomi.push.service.receivers.PingReceiver" sender="other-app" />
+    <prescription type="broadcast" sender="other-app">
+        <intent-filter>
+            <action name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            <action name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            <action name="com.xiaomi.mipush.ERROR" />
+        </intent-filter>
+    </prescription>
   
     <prescription type="service" class="com.baidu.android.pushservice.CommandService" sender="other-app"/>
     <prescription type="service" class="com.baidu.android.pushservice.PushService" sender="other-app" />
@@ -43,6 +50,7 @@
     <prescription type="service" class="com.igexin.getuiext.service.GetuiExtService" sender="other-app" />
     
     <prescription type="service" class="com.huawei.android.pushagent.PushService" sender="other-app"/>
+    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.EventReceiver" sender="other-app" />
     <prescription type="service" class="com.meizu.cloud.pushsdk.NotificationService" sender="other-app"/>
     <prescription type="service" class="com.coloros.mcssdk.PushService" sender="other-app"/>
     <prescription type="service" class="com.vivo.push.sdk.service.CommandClientService" sender="other-app"/>
@@ -70,7 +78,6 @@
     <prescription type="service" class="com.tencent.qalsdk.service.QalService" sender="other-app" />
     <prescription type="service" class="com.tencent.qalsdk.service.QalAssistService" sender="other-app" />
     <prescription type="service" class="com.qq.e.comm.DownloadService" sender="other-app" />
-    
     <prescription type="service" sender="other-app" >
         <intent-filter>
             <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
@@ -89,6 +96,8 @@
     <prescription type="activity" class="cn.jpush.android.ui.PopWinActivity" sender="other-app" />
     <prescription type="activity" class="com.tencent.android.tpush.XGPushActivity" sender="other-app" />
     
+    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.sdk.PushReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.sdk.PushManagerReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.getuiext.service.PayloadReceiver" sender="other-app" />
@@ -96,9 +105,6 @@
     <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="other-app" />
-    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="any" />
-    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="any" />
-    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.EventReceiver" sender="any" />
     <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="other-app" />
@@ -107,14 +113,49 @@
     <prescription type="broadcast" class="com.ss.android.push.DefaultReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.ss.android.message.MessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.tencent.android.tpush.XGPushReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.tencent.msdk.dns.HttpDnsCache$ConnectivityChangeReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.tencent.special.httpdns.Cache$ConnectReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.umeng.message.NotificationProxyBroadcastReceiver" sender="other-app" />
-    
     <prescription type="broadcast" sender="other-app" >
         <intent-filter>
             <action name="com.tencent.android.tpush.action.SDK" />
+            <action name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
             <action name="com.tencent.android.tpush.action.FEEDBACK" />
             <action name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
-            <action name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+            <action name="cn.jpush.android.intent.REGISTRATION" />
+            <action name="cn.jpush.android.intent.UNREGISTRATION" />
+            <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+            <action name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+            <action name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+            <action name="cn.jpush.android.intent.CONNECTION" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="com.huawei.android.push.intent.REGISTRATION" />
+            <action name="com.huawei.android.push.intent.RECEIVE" />
+            <action name="com.huawei.android.push.intent.CLICK" />
+            <action name="com.huawei.intent.action.PUSH_STATE" />
+            <action name="com.huawei.android.push.intent.REFRESH_PUSH_CHANNEL" />
+            <action name="com.huawei.intent.action.PUSH" />
+            <action name="com.huawei.intent.action.PUSH_ON" />
+            <action name="com.huawei.android.push.PLUGIN" />
+            <action name="com.huawei.android.push.intent.REGISTER" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START" />
+            <action name="com.meizu.flyme.push.intent.MESSAGE" />
+            <action name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+            <action name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+            <action name="com.meizu.c2dm.intent.REGISTRATION" />
+            <action name="com.meizu.c2dm.intent.RECEIVE" />
         </intent-filter>
     </prescription>
     
@@ -158,4 +199,63 @@
     <!-- ixintui -->
     <prescription type="service" class="com.ixintui.push.PushService" sender="any" />
     <prescription type="service" class="com.ixintui.push.MediateService" sender="any" />
+    
+    
+    <!-- approximate matching -->
+    <prescription type="broadcast" class="com.UCMobile" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.jingdong.*" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.jd.*" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.tencent.tmgp.*" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
 </prescriptions>
