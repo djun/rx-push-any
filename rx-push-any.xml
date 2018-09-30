@@ -16,8 +16,10 @@
             <action name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
             <action name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
             <action name="com.xiaomi.mipush.ERROR" />
+            <action name="com.xiaomi.push.PING_TIMER" />
         </intent-filter>
     </prescription>
+    <prescription type="broadcast" class="*.push.MiMessageReceiver" sender="other-app" />
   
     <prescription type="service" class="com.baidu.android.pushservice.CommandService" sender="other-app"/>
     <prescription type="service" class="com.baidu.android.pushservice.PushService" sender="other-app" />
@@ -99,13 +101,14 @@
     
     <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.huawei.hms.support.api.push.PushEventReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.sdk.PushReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.sdk.PushManagerReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.getuiext.service.PayloadReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.igexin.download.DownloadReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="other-app" />
@@ -159,6 +162,26 @@
             <action name="com.meizu.c2dm.intent.RECEIVE" />
         </intent-filter>
     </prescription>
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="com.jingdong.push.msg.receiver.action" />
+            <action name="com.wangyin.push.CHECK_SERVICE" />
+        </intent-filter>
+    </prescription>
+    
+    <!-- 365RiLi -->
+    <prescription type="broadcast" class="com.when.birthday.receiver.AlarmReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.when.birthday.receiver.BootReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.when.birthday.receiver.TimeSetReceiver" sender="other-app" />
+    
+    <!-- JDJinRong -->
+    <prescription type="service" class="com.robile.push.JDPushService" sender="other-app" />
+    <prescription type="service" class="com.jingdong.jdpush_new.JDSPushService" sender="other-app" />
+    <prescription type="service" class="com.jingdong.jdpush_new.PushIntentService" sender="other-app" />
+    <prescription type="service" class="com.jd.jrapp.push.MessageService" sender="other-app" />
+    <prescription type="broadcast" class="com.jd.jrapp.push.jdpush.JDPushMessageReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.jd.jrapp.library.keeplive.JRMessageReceiver" sender="other-app" />
+    <prescription type="broadcast" class="com.jd.jrapp.push.receiver.TencentPushReceiver" sender="other-app" />
     
     
     <!-- Mobridge -->
@@ -246,6 +269,34 @@
         </intent-filter>
     </prescription>
     <prescription type="broadcast" class="com.tencent.tmgp.*" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.wandoujia.*" >
+        <intent-filter>
+            <action name="android.net.conn.CONNECTIVITY_CHANGE" />
+            <action name="android.intent.action.BOOT_COMPLETED" />
+            <action name="android.intent.action.USER_PRESENT" />
+            <action name="android.intent.action.PACKAGE_ADDED" />
+            <action name="android.intent.action.PACKAGE_REPLACED" />
+            <action name="android.intent.action.PACKAGE_CHANGED" />
+            <action name="android.intent.action.PACKAGE_REMOVED" />
+            <action name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+            <action name="android.intent.action.ACTION_POWER_CONNECTED" />
+            <action name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+        </intent-filter>
+    </prescription>
+    <prescription type="broadcast" class="com.bilibili.*" >
         <intent-filter>
             <action name="android.net.conn.CONNECTIVITY_CHANGE" />
             <action name="android.intent.action.BOOT_COMPLETED" />
