@@ -62,6 +62,7 @@
     <prescription type="service" class="com.ss.android.push.daemon.PushService" sender="other-app"/>
     <prescription type="service" class="com.ss.android.message.NotifyService" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV3" sender="other-app" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV4" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushService" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.rpc.XGRemoteService" sender="other-app" />
     <prescription type="service" class="com.umeng.update.net.DownloadingService" sender="other-app" />
@@ -182,6 +183,17 @@
     <prescription type="broadcast" class="com.jd.jrapp.push.jdpush.JDPushMessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.jd.jrapp.library.keeplive.JRMessageReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.jd.jrapp.push.receiver.TencentPushReceiver" sender="other-app" />
+    
+    <!-- WeiYun -->
+    <prescription type="service" class="com.qq.qcloud.daemon.DaemonService2" sender="other-app" />
+    <prescription type="service" class="com.qq.qcloud.daemon.DaemonService3" sender="other-app" />
+    <prescription type="service" class="com.qq.qcloud.service.EmptyService" sender="other-app" />
+    <prescription type="broadcast" class="com.qq.qcloud.daemon.DaemonReportBroadcast" sender="other-app" />
+    <prescription type="broadcast" sender="other-app" >
+        <intent-filter>
+            <action name="com.qq.qcloud.daemon.action.ROUTE_KEEP" />
+        </intent-filter>
+    </prescription>
     
     
     <!-- Mobridge -->
