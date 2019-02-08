@@ -65,6 +65,9 @@
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV4" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.service.XGPushService" sender="other-app" />
     <prescription type="service" class="com.tencent.android.tpush.rpc.XGRemoteService" sender="other-app" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGDaemonService" sender="other-app" />
+    <prescription type="service" class="com.tencent.android.tpush.XGPushProvider" sender="other-app" />
+    <prescription type="service" class="com.tencent.android.tpush.SettingsContentProvider" sender="other-app" />
     <prescription type="service" class="com.umeng.update.net.DownloadingService" sender="other-app" />
     <prescription type="service" class="org.android.agoo.client.MessageReveiverService" sender="other-app"/>
     <prescription type="service" class="com.umeng.message.UmengService" sender="other-app" />
@@ -99,6 +102,9 @@
     <prescription type="activity" class="cn.jpush.android.ui.PopWinActivity" sender="other-app" />
     <prescription type="activity" class="com.tencent.android.tpush.XGPushActivity" sender="other-app" />
     <prescription type="activity" class="com.qq.e.ads.ADActivity" sender="other-app" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity1" sender="other-app" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity2" sender="other-app" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity3" sender="other-app" />
     
     <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="other-app" />
     <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="other-app" />
