@@ -176,6 +176,10 @@
         </intent-filter>
     </prescription>
     
+    <prescription type="provider" class="com.tencent.android.tpush.XGPushProvider" sender="any" />
+    <prescription type="provider" class="com.tencent.android.tpush.SettingsContentProvider" sender="any" />
+    <prescription type="provider" class="com.tencent.mid.api.MidProvider" sender="any" />
+    
     <!-- 365RiLi -->
     <prescription type="broadcast" class="com.when.birthday.receiver.AlarmReceiver" sender="other-app" />
     <prescription type="broadcast" class="com.when.birthday.receiver.BootReceiver" sender="other-app" />
