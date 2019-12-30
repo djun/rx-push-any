@@ -1,4 +1,8 @@
-<prescriptions xmlns="http://greenify.github.io/schemas/prescription/v3">
+<prescriptions xmlns="http://greenify.github.io/schemas/prescription/v3
+    <prescription type="provider" class="com.tencent.android.tpush.XGPushProvider" sender="any" />
+    <prescription type="provider" class="com.tencent.android.tpush.SettingsContentProvider" sender="any" />
+    <prescription type="provider" class="com.tencent.mid.api.MidProvider" sender="any" />
+    
     <prescription type="service" class="com.xiaomi.push.service.XMPushService" sender="other-app" />
     <prescription type="service" class="com.xiaomi.push.service.XMJobService" sender="other-app" />
     <prescription type="service" class="com.xiaomi.mipush.sdk.PushMessageHandler" sender="other-app" />
@@ -46,45 +50,43 @@
         </intent-filter>
     </prescription>
     
-    <prescription type="service" class="com.igexin.dowload.DownloadService" sender="other-app" />
-    <prescription type="service" class="com.igexin.sdk.PushService" sender="other-app"/>
-    <prescription type="service" class="com.igexin.sdk.PushServiceUser" sender="other-app" />
-    <prescription type="service" class="com.igexin.getuiext.service.GetuiExtService" sender="other-app" />
+    <prescription type="service" class="com.igexin.dowload.DownloadService" sender="any" />
+    <prescription type="service" class="com.igexin.sdk.PushService" sender="any"/>
+    <prescription type="service" class="com.igexin.sdk.PushServiceUser" sender="any" />
+    <prescription type="service" class="com.igexin.getuiext.service.GetuiExtService" sender="any" />
     
-    <prescription type="service" class="com.huawei.android.pushagent.PushService" sender="other-app"/>
-    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.EventReceiver" sender="other-app" />
-    <prescription type="service" class="com.meizu.cloud.pushsdk.NotificationService" sender="other-app"/>
-    <prescription type="service" class="com.coloros.mcssdk.PushService" sender="other-app"/>
-    <prescription type="service" class="com.vivo.push.sdk.service.CommandClientService" sender="other-app"/>
-    <prescription type="service" class="cn.jpush.android.service.DaemonService" sender="other-app"/>
-    <prescription type="service" class="cn.jpush.android.service.PushService" sender="other-app"/>
-    <prescription type="service" class="com.ss.android.message.PushJobService" sender="other-app"/>
-    <prescription type="service" class="com.ss.android.push.daemon.PushService" sender="other-app"/>
-    <prescription type="service" class="com.ss.android.message.NotifyService" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV3" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV4" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.service.XGPushService" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.rpc.XGRemoteService" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.service.XGDaemonService" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.XGPushProvider" sender="other-app" />
-    <prescription type="service" class="com.tencent.android.tpush.SettingsContentProvider" sender="other-app" />
-    <prescription type="service" class="com.umeng.update.net.DownloadingService" sender="other-app" />
-    <prescription type="service" class="org.android.agoo.client.MessageReveiverService" sender="other-app"/>
-    <prescription type="service" class="com.umeng.message.UmengService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.UmengDownloadResourceService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.UmengIntentService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.UmengMessageIntentReceiverService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.UmengMessageCallbackHandlerService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.XiaomiIntentService" sender="other-app" />
-    <prescription type="service" class="com.umeng.message.provider.MessageProvider" sender="other-app" />
-    <prescription type="service" class="com.dianping.base.push.pushservice.dp.FakeService" sender="other-app" />
-    <prescription type="service" class="com.dianping.base.push.pushservice.dp.DPPushService" sender="other-app" />
-    <prescription type="service" class="com.dianping.base.push.pushservice.PushWakeUpJob" sender="other-app" />
-    <prescription type="service" class="com.dianping.base.push.pushservice.MZPushService" sender="other-app" />
-    <prescription type="service" class="com.tencent.qalsdk.service.QalService" sender="other-app" />
-    <prescription type="service" class="com.tencent.qalsdk.service.QalAssistService" sender="other-app" />
-    <prescription type="service" class="com.qq.e.comm.DownloadService" sender="other-app" />
-    <prescription type="service" sender="other-app" >
+    <prescription type="service" class="com.huawei.android.pushagent.PushService" sender="any"/>
+    <prescription type="service" class="com.huawei.deviceCloud.microKernel.push.EventReceiver" sender="any" />
+    <prescription type="service" class="com.meizu.cloud.pushsdk.NotificationService" sender="any"/>
+    <prescription type="service" class="com.coloros.mcssdk.PushService" sender="any"/>
+    <prescription type="service" class="com.vivo.push.sdk.service.CommandClientService" sender="any"/>
+    <prescription type="service" class="cn.jpush.android.service.DaemonService" sender="any"/>
+    <prescription type="service" class="cn.jpush.android.service.PushService" sender="any"/>
+    <prescription type="service" class="com.ss.android.message.PushJobService" sender="any"/>
+    <prescription type="service" class="com.ss.android.push.daemon.PushService" sender="any"/>
+    <prescription type="service" class="com.ss.android.message.NotifyService" sender="any" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV3" sender="any" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGPushServiceV4" sender="any" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGPushService" sender="any" />
+    <prescription type="service" class="com.tencent.android.tpush.rpc.XGRemoteService" sender="any" />
+    <prescription type="service" class="com.tencent.android.tpush.service.XGDaemonService" sender="any" />
+    <prescription type="service" class="com.umeng.update.net.DownloadingService" sender="any" />
+    <prescription type="service" class="org.android.agoo.client.MessageReveiverService" sender="any"/>
+    <prescription type="service" class="com.umeng.message.UmengService" sender="any" />
+    <prescription type="service" class="com.umeng.message.UmengDownloadResourceService" sender="any" />
+    <prescription type="service" class="com.umeng.message.UmengIntentService" sender="any" />
+    <prescription type="service" class="com.umeng.message.UmengMessageIntentReceiverService" sender="any" />
+    <prescription type="service" class="com.umeng.message.UmengMessageCallbackHandlerService" sender="any" />
+    <prescription type="service" class="com.umeng.message.XiaomiIntentService" sender="any" />
+    <prescription type="service" class="com.umeng.message.provider.MessageProvider" sender="any" />
+    <prescription type="service" class="com.dianping.base.push.pushservice.dp.FakeService" sender="any" />
+    <prescription type="service" class="com.dianping.base.push.pushservice.dp.DPPushService" sender="any" />
+    <prescription type="service" class="com.dianping.base.push.pushservice.PushWakeUpJob" sender="any" />
+    <prescription type="service" class="com.dianping.base.push.pushservice.MZPushService" sender="any" />
+    <prescription type="service" class="com.tencent.qalsdk.service.QalService" sender="any" />
+    <prescription type="service" class="com.tencent.qalsdk.service.QalAssistService" sender="any" />
+    <prescription type="service" class="com.qq.e.comm.DownloadService" sender="any" />
+    <prescription type="service" sender="any" >
         <intent-filter>
             <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
             <action name="cn.jpush.android.intent.REGISTRATION" />
@@ -95,39 +97,39 @@
     
     <prescription type="service" package="com.sohu.inputmethod.sogou" class="com.sogou.udp.push.PushService" sender="other-app" />
     
-    <prescription type="activity" class="com.igexin.sdk.PushActivity" sender="other-app" />
-    <prescription type="activity" class="com.igexin.sdk.GActivity" sender="other-app"/>
-    <prescription type="activity" class="com.igexin.getuiext.activity.GetuiExtActivity" sender="other-app" />
-    <prescription type="activity" class="cn.jpush.android.ui.PushActivity" sender="other-app" />
-    <prescription type="activity" class="cn.jpush.android.ui.PopWinActivity" sender="other-app" />
-    <prescription type="activity" class="com.tencent.android.tpush.XGPushActivity" sender="other-app" />
-    <prescription type="activity" class="com.qq.e.ads.ADActivity" sender="other-app" />
-    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity1" sender="other-app" />
-    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity2" sender="other-app" />
-    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity3" sender="other-app" />
+    <prescription type="activity" class="com.igexin.sdk.PushActivity" sender="any" />
+    <prescription type="activity" class="com.igexin.sdk.GActivity" sender="any"/>
+    <prescription type="activity" class="com.igexin.getuiext.activity.GetuiExtActivity" sender="any" />
+    <prescription type="activity" class="cn.jpush.android.ui.PushActivity" sender="any" />
+    <prescription type="activity" class="cn.jpush.android.ui.PopWinActivity" sender="any" />
+    <prescription type="activity" class="com.tencent.android.tpush.XGPushActivity" sender="any" />
+    <prescription type="activity" class="com.qq.e.ads.ADActivity" sender="any" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity1" sender="any" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity2" sender="any" />
+    <prescription type="activity" class="com.qq.qcloud.daemon.DaemonActivity3" sender="any" />
     
-    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.huawei.hms.support.api.push.PushEventReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.igexin.sdk.PushReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.igexin.sdk.PushManagerReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.igexin.getuiext.service.PayloadReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.igexin.download.DownloadReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="other-app" />
-    <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="other-app" />
-    <prescription type="broadcast" class="cn.jpush.android.service.PushReceiverver" sender="other-app" />
-    <prescription type="broadcast" class="com.baidu.android.pushservice.RegistrationReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.ss.android.push.DefaultReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.ss.android.message.MessageReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.tencent.android.tpush.XGPushReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.tencent.msdk.dns.HttpDnsCache$ConnectivityChangeReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.tencent.special.httpdns.Cache$ConnectReceiver" sender="other-app" />
-    <prescription type="broadcast" class="com.umeng.message.NotificationProxyBroadcastReceiver" sender="other-app" />
-    <prescription type="broadcast" sender="other-app" >
+    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushMKService" sender="any" />
+    <prescription type="broadcast" class="com.huawei.deviceCloud.microKernel.push.PushBootReceiver" sender="any" />
+    <prescription type="broadcast" class="com.huawei.push.service.receivers.HWPushMessageHandler" sender="any" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushBootReceiver" sender="any" />
+    <prescription type="broadcast" class="com.huawei.android.pushagent.PushEventReceiver" sender="any" />
+    <prescription type="broadcast" class="com.huawei.hms.support.api.push.PushEventReceiver" sender="any" />
+    <prescription type="broadcast" class="com.igexin.sdk.PushReceiver" sender="any" />
+    <prescription type="broadcast" class="com.igexin.sdk.PushManagerReceiver" sender="any" />
+    <prescription type="broadcast" class="com.igexin.getuiext.service.PayloadReceiver" sender="any" />
+    <prescription type="broadcast" class="com.igexin.download.DownloadReceiver" sender="any" />
+    <prescription type="broadcast" class="com.meizu.cloud.pushsdk.SystemReceiver" sender="any" />
+    <prescription type="broadcast" class="com.vivo.VivoPushMessageReceiver" sender="any" />
+    <prescription type="broadcast" class="cn.jpush.android.service.AlarmReceiveriver" sender="any" />
+    <prescription type="broadcast" class="cn.jpush.android.service.PushReceiverver" sender="any" />
+    <prescription type="broadcast" class="com.baidu.android.pushservice.RegistrationReceiver" sender="any" />
+    <prescription type="broadcast" class="com.ss.android.push.DefaultReceiver" sender="any" />
+    <prescription type="broadcast" class="com.ss.android.message.MessageReceiver" sender="any" />
+    <prescription type="broadcast" class="com.tencent.android.tpush.XGPushReceiver" sender="any" />
+    <prescription type="broadcast" class="com.tencent.msdk.dns.HttpDnsCache$ConnectivityChangeReceiver" sender="any" />
+    <prescription type="broadcast" class="com.tencent.special.httpdns.Cache$ConnectReceiver" sender="any" />
+    <prescription type="broadcast" class="com.umeng.message.NotificationProxyBroadcastReceiver" sender="any" />
+    <prescription type="broadcast" sender="any" >
         <intent-filter>
             <action name="com.tencent.android.tpush.action.SDK" />
             <action name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
@@ -135,7 +137,7 @@
             <action name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
         </intent-filter>
     </prescription>
-    <prescription type="broadcast" sender="other-app" >
+    <prescription type="broadcast" sender="any" >
         <intent-filter>
             <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
             <action name="cn.jpush.android.intent.REGISTRATION" />
@@ -146,7 +148,7 @@
             <action name="cn.jpush.android.intent.CONNECTION" />
         </intent-filter>
     </prescription>
-    <prescription type="broadcast" sender="other-app" >
+    <prescription type="broadcast" sender="any" >
         <intent-filter>
             <action name="com.huawei.android.push.intent.REGISTRATION" />
             <action name="com.huawei.android.push.intent.RECEIVE" />
@@ -159,7 +161,7 @@
             <action name="com.huawei.android.push.intent.REGISTER" />
         </intent-filter>
     </prescription>
-    <prescription type="broadcast" sender="other-app" >
+    <prescription type="broadcast" sender="any" >
         <intent-filter>
             <action name="com.meizu.cloud.pushservice.action.PUSH_SERVICE_START" />
             <action name="com.meizu.flyme.push.intent.MESSAGE" />
@@ -169,16 +171,12 @@
             <action name="com.meizu.c2dm.intent.RECEIVE" />
         </intent-filter>
     </prescription>
-    <prescription type="broadcast" sender="other-app" >
+    <prescription type="broadcast" sender="any" >
         <intent-filter>
             <action name="com.jingdong.push.msg.receiver.action" />
             <action name="com.wangyin.push.CHECK_SERVICE" />
         </intent-filter>
     </prescription>
-    
-    <prescription type="provider" class="com.tencent.android.tpush.XGPushProvider" sender="any" />
-    <prescription type="provider" class="com.tencent.android.tpush.SettingsContentProvider" sender="any" />
-    <prescription type="provider" class="com.tencent.mid.api.MidProvider" sender="any" />
     
     <!-- 365RiLi -->
     <prescription type="broadcast" class="com.when.birthday.receiver.AlarmReceiver" sender="other-app" />
