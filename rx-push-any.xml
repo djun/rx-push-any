@@ -1,4 +1,4 @@
-<prescriptions xmlns="http://greenify.github.io/schemas/prescription/v3
+<prescriptions xmlns="http://greenify.github.io/schemas/prescription/v3" >
     <prescription type="provider" class="com.tencent.android.tpush.XGPushProvider" sender="any" />
     <prescription type="provider" class="com.tencent.android.tpush.SettingsContentProvider" sender="any" />
     <prescription type="provider" class="com.tencent.mid.api.MidProvider" sender="any" />
